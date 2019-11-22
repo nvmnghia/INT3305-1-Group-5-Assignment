@@ -20,10 +20,10 @@ Phan Anh Dương - 15021924
 > - Vẽ đồ thị dạng sóng (theo thời gian) của tín hiệu:
 >
 >   ```text
->   s1(t) = A sin(2pi f t)
+>   s1(t) = A sin(2pi * f * t)
 >   ```
 >
-> - Vẽ đồ thị dạng sóng (theo thời gian) của tín hiệu
+> - Vẽ đồ thị dạng sóng (theo thời gian) của tín hiệu.
 >
 > ![equation](../Ex1/equation.png)
 >

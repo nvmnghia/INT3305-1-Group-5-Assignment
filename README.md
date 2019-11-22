@@ -9,4 +9,4 @@
 | Nguyễn Việt Minh Nghĩa | 15021358 | [Ex 5](https://github.com/nvmnghia/INT3305-1-Group-5-Assignment/tree/master/Ex5) |
 | Lê Tuấn Anh            | 17020572 | [Ex 6](https://github.com/nvmnghia/INT3305-1-Group-5-Assignment/tree/master/Ex6) |
 
-Each folder has its own `README.md` file
+Each folder has its own `README.md` file.

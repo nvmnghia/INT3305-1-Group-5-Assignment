@@ -47,12 +47,8 @@ img_draw = ImageDraw.Draw(img)
 
 # Draw black square from the lower left corner
 # The lower left square must be black
-draw_num = 1
 for i in range(1, args.row + 1):
     for j in range(i % 2, args.column + 1, 2):
         draw(img_draw, j, i, ssize)
-
-        img.save(f'{draw_num}-{i}.{j}.png')
-        draw_num += 1
 
 img.save(args.output)

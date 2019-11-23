@@ -1,4 +1,3 @@
-import sys
 import argparse
 
 from PIL import Image, ImageDraw
@@ -33,7 +32,7 @@ parser.add_argument('-s', '--ssize', metavar='S',
                     help='Size of each square (default 50 px)')
 parser.add_argument('output', metavar='O',
                     type=str, nargs='?', default='checkerboard.png',
-                    help='Output filename (default output.png)')
+                    help='Output filename (default checkerboard.png)')
 args = parser.parse_args()
 
 ssize = args.ssize
@@ -42,7 +41,6 @@ img_height = args.row * ssize
 
 # White canvas
 img = Image.new('RGB', (img_width, img_height), color='white')
-
 img_draw = ImageDraw.Draw(img)
 
 # Draw black square from the lower left corner

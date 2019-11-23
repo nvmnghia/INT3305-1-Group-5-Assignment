@@ -29,8 +29,8 @@ parser.add_argument('-r', '--row', metavar='R',
                     type=int, default=8,
                     help='Number of row (default 8)')
 parser.add_argument('-s', '--ssize', metavar='S',
-                    type=int, default=200,
-                    help='Size of each square (default 200 px)')
+                    type=int, default=50,
+                    help='Size of each square (default 50 px)')
 parser.add_argument('output', metavar='O',
                     type=str, nargs='?', default='checkerboard.png',
                     help='Output filename (default output.png)')

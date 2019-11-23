@@ -1,6 +1,6 @@
 # Exercise 1
 
-## Asignee
+## Assignee
 
 Phan Anh Dương - 15021924
 
@@ -15,6 +15,7 @@ Phan Anh Dương - 15021924
 > - n : một giá trị nguyên
 >
 > **Yêu cầu**
+>
 > Viết các chương trình python thực hiện công việc sau:
 >
 > - Vẽ đồ thị dạng sóng (theo thời gian) của tín hiệu:

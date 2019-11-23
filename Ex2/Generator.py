@@ -144,3 +144,4 @@ for s in sine_waveDo2:
     wav_file12.writeframes(struct.pack('h',int(s*amplitude)))
 wav_file12.close()
 
+print("Create all file completed!")

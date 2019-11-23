@@ -12,13 +12,13 @@ def draw(img_draw, column, row, ssize):
     (2 coordinates for bound, origin (0,0) at upper left).
     '''
 
-    x1 = column * ssize
-    x0 = x1 - ssize
+    x0 = ssize * (column - 1)
+    y0 = img.height - ssize * row
 
-    y1 = img.height - row * ssize
-    y0 = y1 + ssize - 1
+    x1 = x0 + ssize - 1
+    y1 = y0 + ssize - 1
 
-    img_draw.rectangle([(x0, y0), (x1 - 1, y1)], fill=(0, 0, 0))
+    img_draw.rectangle([(x0, y0), (x1, y1)], fill=(0, 0, 0))
 
 
 parser = argparse.ArgumentParser(description='Generate checkerboard pattern.')

@@ -49,8 +49,9 @@ for x in range(num_samples):
     sine_waveSi1.append(np.sin(2 * np.pi * frequencySi1 * x * 1/sampling_rate))
     sine_waveDo2.append(np.sin(2 * np.pi * frequencyDo2 * x * 1/sampling_rate))
 
-# Save sine wave Do as Wav file
+# Save sine wave as Wav file
 amplitude = 8000
+
 file1 = "Do.wav"
 file2 = "Do1.wav"
 file3 = "Re.wav"

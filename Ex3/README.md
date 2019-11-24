@@ -14,7 +14,7 @@ Nguyễn Chí Đạt - 17020675
 
 ## Hướng dẫn
 
-> cài thư viện Pillow: pip install Pillow.
-> -ý 1: run file Image2gray.py .
-> -ý 2: run file splitBandsRGBA.py .
-> -ý 3: run file mergeBandsRGBA.py .
+> Cài thư viện Pillow: pip install Pillow
+> - Ý 1: run file Image2gray.py  (output là file greysale.png )
+> - Ý 2: run file splitBandsRGBA.py   (output là 4 file tương ứng với 4 bands của ảnh RGBA: redBand.png, greenBand.png, blueBand.png, alphaBand.png )
+> - Ý 3: run file mergeBandsRGBA.py   (output là file MergeImage.png ) 

@@ -1,0 +1,19 @@
+Em làm 2 file py để thực hiện vẽ 2 tín hiệu theo yêu cầu:
+
+import matplotlib.pyplot để có thể vẽ tín hiệu
+import numpy để có các thể tính các giá trị của s1 theo t
+import math để có các hàm tính toán đặc biệt nếu cần
+
+s1:
+Tạo tần số lấy mẫu fs
+Từ tần số lấy mẫu có thể tính được thời gian lấy mẫu t
+Tạo biên độ tín hiệu A và tần số cơ bản f
+Tính s1(t) với hàm np.sin()
+Vẽ hình với pyplot
+
+s2:
+Tương tự s1 khi tạo fs, tính t và tạo A, f
+Tạo số tùy ý n
+Tính s2(t) bằng 1 hàm sin(x) tự tạo
+Trong sin(x) cho sum = 0, tính sum theo i=0 -> 2n+1 và trả về giá trị của sum
+Vẽ hình với pyplot 

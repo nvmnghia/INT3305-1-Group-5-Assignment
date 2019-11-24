@@ -60,7 +60,7 @@ $ python gradient.py
 # Options
 $ python gradient.py -h
 usage: Generate gradient. [-h] [-D [{horizontal,vertical,diagonal}]] [-W W]
-                          [-H H] [-O O]
+                          [-H H] [-O O] [-P]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -72,8 +72,16 @@ optional arguments:
   -W W, --width W       Output width
   -H H, --height H      Output height
   -O O, --output O      Output filename (default gradient.direction.png)
+  -P, --perceptual      Default starting hue of red is 0 degree. This option
+                        moves it to 354 degree for perceptual "red".
 ```
 
 #### 2. Preview
 
 ![gradient.horizontal.png](../Ex5/gradient.horizontal.png)
+
+#### 3. Note about starting hue of red
+
+In HSV color wheel, pure red starts at 0 degree of hue. However, perceptually, hue values close to 360 degree is also considered "red". According to the colors listed on [this Wiki article](https://en.wikipedia.org/wiki/Shades_of_red), red could start at 345 degree hue.
+
+The `-P` flag enables this mode.

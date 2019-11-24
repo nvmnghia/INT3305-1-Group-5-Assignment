@@ -29,6 +29,9 @@ def get_width_height(direction, arg_width, arg_height):
     return arg_width, arg_height
 
 
+PERCEPTUAL_RED_STARTS_AT = 345
+
+
 def gen_horizontal_gradient(width, height):
     img = Image.new('RGB', (width, height))
     img_draw = ImageDraw.Draw(img)
@@ -37,7 +40,10 @@ def gen_horizontal_gradient(width, height):
     hue_step = 360 / width
     for i in range(width):
         img_draw.line([(i, 0), (i, height)], width=1,
-                       fill=ImageColor.getrgb(f'hsv({int(hue_step * i)}, 100%, 100%)'))
+                       fill=ImageColor.getrgb(
+                           f'hsv({int(hue_step * i)}, 100%, 100%)' if not PERCEPTUAL_RED else
+                           f'hsv({int(hue_step * i + PERCEPTUAL_RED_STARTS_AT) % 360}, 100%, 100%)'
+                        ))
     
     return img
 
@@ -59,7 +65,10 @@ def gen_diagonal_gradient(width, height):
             'x': 0 if i < height else i - height + 1,
             'y': i if i < height else height - 1
         }
-        color = ImageColor.getrgb(f'hsv({int(hue_step * i)}, 100%, 100%)')
+        color = ImageColor.getrgb(
+            f'hsv({int(hue_step * i)}, 100%, 100%)' if not PERCEPTUAL_RED else
+            f'hsv({int(hue_step * i + PERCEPTUAL_RED_STARTS_AT) % 360}, 100%, 100%)'
+        )
 
         num_of_drawn_pixel = 0
         while True:
@@ -89,10 +98,16 @@ parser.add_argument('-H', '--height', metavar='H', type=int,
                     help='Output height')
 parser.add_argument('-O', '--output', metavar='O', type=str,
                     help='Output filename (default gradient.direction.png)')
+parser.add_argument('-P', '--perceptual', dest='perceptual', action='store_true',
+                    help='''Default starting hue of red is 0 degree.
+                            This option moves it to 354 degree for perceptual "red".''')
 args = parser.parse_args()
 
 # Handle defaults
 width, height = get_width_height(args.direction, args.width, args.height)
+
+PERCEPTUAL_RED = True if args.perceptual else False
+print(PERCEPTUAL_RED)
 
 output = None
 if args.direction == Direction.HORIZONTAL.value:
@@ -103,4 +118,7 @@ else:
     output = gen_diagonal_gradient(width, height)
 
 output.save(args.output if args.output is not None 
-            else f'gradient.{args.direction}.png')
+            else 
+                f'gradient.{args.direction}.perceptual.png' if PERCEPTUAL_RED
+                else f'gradient.{args.direction}.png'
+            )

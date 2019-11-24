@@ -46,7 +46,7 @@ optional arguments:
 
 #### 2. Preview
 
-![checkerboard.png](../Ex5/checkerboard.png)
+![checkerboard.png](../Ex5/output/checkerboard.png)
 
 ### 2. Gradient generator
 
@@ -78,10 +78,16 @@ optional arguments:
 
 #### 2. Preview
 
-![gradient.horizontal.png](../Ex5/gradient.horizontal.png)
+Default:
+
+![gradient.horizontal.png](../Ex5/output/gradient.horizontal.png)
+
+Perceptual:
+
+![gradient.horizontal.perceptual.png](../Ex5/output/gradient.horizontal.perceptual.png)
 
 #### 3. Note about starting hue of red
 
-In HSV color wheel, pure red starts at 0 degree of hue. However, perceptually, hue values close to 360 degree is also considered "red". According to the colors listed on [this Wiki article](https://en.wikipedia.org/wiki/Shades_of_red), red could start at 345 degree hue.
+In HSV color wheel, pure red starts at 0 degree of hue. However, perceptually, hue values close to 360 degree are also considered "red". According to the colors listed on [this Wiki article](https://en.wikipedia.org/wiki/Shades_of_red), red could start at 345 degree hue.
 
 The `-P` flag enables this mode.

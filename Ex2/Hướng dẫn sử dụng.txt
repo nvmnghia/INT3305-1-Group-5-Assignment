@@ -26,10 +26,10 @@ Với file Player.py
 Khi thầy gõ tên file thì không cần phải gõ toàn bộ tên file với đuôi wav mà chỉ cần gõ tên file thôi ạ. (VD: Thay vì gõ Do.wav thì thầy chỉ cần gõ Do)
 
 Em có 2 sự lựa chọn khi bắt đầu:
-1. Lựa chọn 1 file để chơi và lặp đi lặp lại file đó
+1. Lựa chọn 1 file để chơi và chơi kéo dài file đó, lặp đi lặp lại ( Yêu cầu của đề bài )
 	Khi gõ Enter liên tục thì file sẽ được chơi tiếp
 	Khi gõ 0 thì sẽ dừng chương trình
-2. Lựa chọn xong một file sẽ chọn một file khác để chơi tiếp
+2. Lựa chọn xong một file sẽ chọn một file khác để chơi tiếp ( Em thử làm thêm một chức năng khác )
 	Khi nhập tên file -> Enter thì file sẽ được chơi
 	Khi không nhập tên file -> Enter thì sẽ thoát chương trình
 
